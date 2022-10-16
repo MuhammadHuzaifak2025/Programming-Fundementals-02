@@ -12,17 +12,26 @@ main(){
 	if (hour == 8){
 		int price, ice_per_cost;
 		days = (quan_ice / 50)/8;
-		hours = (quan_ice %400);
-		hours = hours / 8;
+		hours = (quan_ice / 50)%8;;
+//		hours = hours / 8;
 //	a= quan_ice/50;
 //		hours = a-days;w
-		printf("%d\n%.0f\n",days,ceil(hours));
+		printf("%d\n%f\n",days,hours);
 		price=per_ice_cost*quan_ice;
 		printf("%d",price);
 	}
 	if(hour==16){
-		
+	int price, ice_per_cost;
+		days = (quan_ice / 50)/16;
+		hours = (quan_ice / 50)%16;
+//		hours = hours / 16;
+//	a= quan_ice/50;
+//		hours = a-days;w
+		printf("%d\n%.0f\n",days,ceil(hours));
+		price=per_ice_cost*(quan_ice-(400*days));
+		price=price + (per_ice_cost*(quan_ice-(400*days))*2);
+		printf("%d",price);
+	}	
 	
 		
 	}
-}
